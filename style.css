@@ -1,175 +1,113 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Universal Styles */
+*{
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: rgb(6, 175, 232);
-    padding: 40px;
+/*Header style */
+header{
+  padding: 10px 20px;
+  margin: 20px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  background-color: skyblue;
+  text-align: center;
+
 }
 
-.container {
-    max-width: 1300px;
-    margin: auto;
+header > h1{
+  font-size: x-large;
+  font-weight: bold;
 }
 
-header {
-    margin-bottom: 30px;
+/* Form Style*/
+#formcontainer{
+  padding: 10px 20px;
+  margin: 20px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  background-color: skyblue;
+  
 }
 
-header h1 {
-    font-size: 32px;
-    margin-bottom: 8px;
+#formcontainer > #studentForm >.input-fields > label{
+  font-weight: bold;
 }
 
-header p {
-    font-size: 18px;
-    color: #555;
+#formcontainer > #studentForm >.input-fields{
+  display:flex;
+  flex-direction: column;
+  
 }
 
-.content {
-    display: grid;
-
-    grid-template-columns: 280px 1fr;
-
-    gap: 30px;
-    align-items: start;
+#formcontainer > #studentForm >.input-fields > input{
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px 20px;
 }
 
-.form-section {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 25px;
+#formcontainer > #studentForm :last-child > button{
+  background-color: lightgray;
+  padding:5px;
+  margin: 5px;
+  cursor: pointer;
+  flex-grow:1;
+  font-weight: bolder;
+  font-size: small;
+  border-radius: 10px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+#formcontainer > #studentForm :last-child{
+  display: flex;
+  justify-content: center;
 }
 
-form label {
-    font-weight: bold;
-    margin-bottom: 7px;
+#studentlist > .list-item{
+  background-color: skyblue;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  
 }
 
-form input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-
-    border: 1px solid #aaa;
-    border-radius: 5px;
-
-    font-size: 15px;
+#studentlist > .list-item > button{
+  background-color: rgb(22, 114, 76);
+  padding:5px;
+  margin: 5px;
+  cursor: pointer;
+  flex-grow:1;
+  font-weight: bolder;
+  font-size: small;
+  border-radius: 10px;
 }
 
-form button {
-    width: 100px;
-    padding: 11px;
-
-    border: none;
-    border-radius: 5px;
-
-    background: #222;
-    color: white;
-
-    cursor: pointer;
-    font-size: 15px;
+/* for list container*/
+#studentlist{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  gap: 5px;
 }
 
-form button:hover {
-    background: #444;
+/* responsive design */
+/* Mobile*/ 
+@media (width <= 320px) {
+  #studentlist > .list-item{
+    grid-column: span 12;
+  }
 }
 
-.student-list {
-    display: grid;
-
-    grid-template-columns: repeat(5, 1fr);
-
-    gap: 15px;
+@media (width < 320px) and (width <= 600px) {
+  #studentlist > .list-item{
+    -ms-grid-column: span 4;
+  }
 }
 
-.student-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-
-    padding: 18px;
-
-    min-height: 150px;
-    background: white;
-}
-
-.student-card h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.student-card p {
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.remove-btn {
-    width: 100%;
-    padding: 9px;
-
-    border: none;
-    border-radius: 5px;
-
-    background: #d9534f;
-    color: white;
-
-    cursor: pointer;
-}
-
-.remove-btn:hover {
-    background: #c9302c;
-}
-
-@media (max-width: 1000px) {
-
-    .content {
-        grid-template-columns: 250px 1fr;
-        gap: 20px;
-    }
-
-    .student-list {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-
-    body {
-        padding: 20px;
-    }
-
-    header h1 {
-        font-size: 28px;
-    }
-
-    .content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .form-section {
-        width: 100%;
-    }
-
-    form button {
-        width: 100px;
-    }
-
-    /* MOBILE: 1 CARD */
-    .student-list {
-        width: 100%;
-        grid-template-columns: 1fr;
-    }
-
-    .student-section {
-        width: 100%;
-    }
+/*Desktop*/
+@media (width >= 1000px){
+  #studentlist > .list-item{
+    grid-column: span 2;
+  }
 }
