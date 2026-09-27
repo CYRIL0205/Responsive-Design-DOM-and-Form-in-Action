@@ -101,7 +101,7 @@ header > h1{
 
 @media (width < 320px) and (width <= 600px) {
   #studentlist > .list-item{
-    -ms-grid-column: span 4;
+    grid-column: span 4;
   }
 }
 
