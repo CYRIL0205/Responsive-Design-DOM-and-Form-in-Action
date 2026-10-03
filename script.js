@@ -1,9 +1,9 @@
 let = students = [
-  {id: 1, name: 'Cook Pu', program: 'Bachelor of Science Major in Information Technology'},
-  {id: 2, name: 'Bebot', program: 'Bachelor of Science Major in Information Technology'},
+  {id: 1, name: 'Alexis', program: 'Bachelor of Science Major in Information Technology'},
+  {id: 2, name: 'Rio', program: 'Bachelor of Science Major in Information Technology'},
   {id: 3, name: 'Kyle', program: 'Bachelor of Science Major in Information Technology'},
-  {id: 4, name: 'Itlog', program: 'Bachelor of Science Major in Information Technology'},
-  {id: 5, name: 'Chicken', program: 'Bachelor of Science Major in Information Technology'}
+  {id: 4, name: 'Juluis', program: 'Bachelor of Science Major in Information Technology'},
+  {id: 5, name: 'Sai', program: 'Bachelor of Science Major in Information Technology'}
 ];
 
 const createListItem = (student) =>{

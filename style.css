@@ -95,13 +95,13 @@ header > h1{
 
 /* responsive design */
 /* Mobile*/ 
-@media (width <= 500px){
+@media (width <= 600px){
   #studentlist > .list-item{
     grid-column: span 12;
   }
 }
 
-@media (width > 500px) and (width <= 1000px) {
+@media (width > 600px) and (width <= 1000px) {
   #studentlist > .list-item{
     grid-column: span 4;
   }
